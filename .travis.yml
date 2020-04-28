@@ -1,1 +1,6 @@
 language: java
+addons:
+  sonarcloud:
+    organization: "brunamlzupper"
+    token: $sonarToken
+script: sonar-scanner -Dsonar.organization=brunamlzupper -Dsonar.projectKey=brunamlzupper_MovieApp -Dsonar.sources=src
