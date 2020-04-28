@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.zup.appmovie">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.movie.view.RecentMovieActivity"></activity>
-        <activity android:name=".feature.menu.view.MenuActivity" />
-        <activity android:name=".feature.splash.view.SplashActivity" />
+    <activity android:name=".feature.splash.view.SplashActivity"></activity>
+    <activity android:name=".feature.menu.view.MenuActivity"/>
+        <activity android:name=".feature.movie.view.RecentMovieActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -4,6 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundmenu"
     tools:context=".feature.menu.view.MenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMenu"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title=" Options menu" />
+
+
+    <Button
+        android:id="@+id/btnRecentMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/buttonshape"
+        android:text="@string/button_recent"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMenu" />
+
+        <Button
+            android:id="@+id/btnFavoriteMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorites_movies"
+            android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRecentMovies"
+            app:layout_constraintVertical_bias="0.096" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
