@@ -3,6 +3,7 @@ addons:
   sonarcloud:
     organization: "brunamlzupper"
     token: $sonarToken
-script: sonar:sonar -Pcoverage -Dsonar.projectKey=brunamlzupper_MovieApp
+script: ./gradlew sonarqube -Dsonar.projectKey=brunamlzupper_MovieApp -Dsonar.organization=brunamlzupper -Dsonar.host.url=https://sonarcloud.io -Dsonar.
+  login=c88b14e3c8c2d5960633ec8a84128599155147af
 before_install:
   - chmod +x gradlew
