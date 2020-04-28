@@ -3,6 +3,6 @@ addons:
   sonarcloud:
     organization: "brunamlzupper"
     token: $sonarToken
-script: sonar-scanner -Dsonar.organization=brunamlzupper -Dsonar.projectKey=brunamlzupper_MovieApp -Dsonar.sources=src
+script: sonar:sonar -Pcoverage -Dsonar.projectKey=brunamlzupper_MovieApp
 before_install:
   - chmod +x gradlew
