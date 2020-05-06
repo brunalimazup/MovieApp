@@ -1,4 +1,4 @@
-package br.com.zup.appmovie.feature.movie.viewModel
+package br.com.zup.appmovie.feature.recentmovie.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
