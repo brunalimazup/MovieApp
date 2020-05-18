@@ -13,8 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MovieRepository {
     private val movieMutableLiveData: MutableLiveData<RecentMovies> = MutableLiveData()
 
-    val retrofit = Retrofit.Builder()
-        .baseUrl("https://api.themoviedb.org/3")
+     val retrofit = Retrofit.Builder()
+        .baseUrl("https://api.themoviedb.org/3/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

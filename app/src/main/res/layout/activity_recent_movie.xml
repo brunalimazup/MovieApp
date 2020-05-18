@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".feature.recentmovie.view.RecentMovieActivity">
 
-    <ListView
-        android:id="@+id/listViewRecentMovie"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"

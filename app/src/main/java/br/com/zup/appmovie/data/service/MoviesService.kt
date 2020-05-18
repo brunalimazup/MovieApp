@@ -7,6 +7,6 @@ import retrofit2.Call
 
 interface MoviesService {
 
-    @GET("/movie/{movie_id}")
+    @GET("movie/{movie_id}")
     fun getMovieById(@Path("id") idMovie: String) : Call<RecentMovies>
 }
