@@ -17,3 +17,13 @@ Uapp/src/main/java/br/com/zup/appmovie/feature/recentmovie/view/RecentMovieActiv
 Yapp/src/main/java/br/com/zup/appmovie/feature/favoritemovie/view/FavoriteMovieActivity.kt,6\3\630d1017601052259321406b83db9d603b3c256d
 w
 Gapp/src/main/java/br/com/zup/appmovie/feature/menu/view/MenuActivity.kt,a\d\ad517e20a44b5a78433950487ac0613599a4262f
+^
+.app/src/main/res/layout/recent_movies_item.xml,6\e\6e34850e1ae4df5eadc432f40f87656c3a4b9aab
+…
+Uapp/src/main/java/br/com/zup/appmovie/feature/interfaces/RecyclerViewClickListener.kt,8\9\894a7fe0dff85c1a0da5fe43575c649947cff1ae
+d
+4app/src/main/java/br/com/zup/appmovie/model/Movie.kt,a\1\a11b6bd6bf8eb40515e81c0c6a8e6964e8102450
+p
+@app/src/main/java/br/com/zup/appmovie/model/DiscoveryResponse.kt,a\0\a0f2123aa40e71329883413de4bf1653f0ff7aa8
+v
+Fapp/src/main/java/br/com/zup/appmovie/data/service/DiscoveryService.kt,9\3\93558cc5661865252450797996601fa73a68aa78

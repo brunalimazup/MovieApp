@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.appmovie.R
-import br.com.zup.appmovie.model.RecentMovies
+import br.com.zup.appmovie.model.Movie
 import kotlinx.android.synthetic.main.recent_movies_item.view.*
 
 class RecentMovieListAdapter(
     private val context: Context,
-    private val movies: List<RecentMovies>
+    private val movies: List<Movie>
 ) : RecyclerView.Adapter<RecentMovieListAdapter.RecentMovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecentMovieViewHolder {
@@ -29,8 +29,9 @@ class RecentMovieListAdapter(
     }
 
     class RecentMovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun populateView(movies: RecentMovies) {
-            itemView.text_view_recent_movie.text = movies.name
+        lateinit var id: String
+        fun populateView(movies: Movie) {
+            itemView.text_view_recent_movie.text = movies.originalTitle
         }
 
     }

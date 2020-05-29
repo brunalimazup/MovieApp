@@ -2,8 +2,9 @@ package br.com.zup.appmovie.data.repository
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import br.com.zup.appmovie.data.service.MoviesService
-import br.com.zup.appmovie.model.RecentMovies
+import br.com.zup.appmovie.data.service.DiscoveryService
+import br.com.zup.appmovie.model.DiscoveryResponse
+import br.com.zup.appmovie.model.Movie
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -11,30 +12,33 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MovieRepository {
-    private val movieMutableLiveData: MutableLiveData<RecentMovies> = MutableLiveData()
+    private val movieMutableLiveData: MutableLiveData<DiscoveryResponse> = MutableLiveData()
 
-     val retrofit = Retrofit.Builder()
+    val retrofit = Retrofit.Builder()
         .baseUrl("https://api.themoviedb.org/3/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val movieService = retrofit.create(MoviesService::class.java)
-
-    fun getMovieById(id: String): MutableLiveData<RecentMovies> {
-        val callback = movieService.getMovieById(id)
-
-        callback.enqueue(object : Callback<RecentMovies> {
-            override fun onFailure(call: Call<RecentMovies>, t: Throwable) {
-                Log.e("MovieRepository", "Erro na requisição")
+    val discoveryService = retrofit.create(DiscoveryService::class.java)
+    fun getRecentMovies(): MutableLiveData<DiscoveryResponse> {
+        val request = discoveryService.getRecentMovies("079a8da33b1d25243977c4834788bcd1")
+        request.enqueue(object : Callback<DiscoveryResponse> {
+            override fun onFailure(call: Call<DiscoveryResponse>, t: Throwable) {
+                Log.d("MovieRepository", "Erro na requisição")
             }
 
-            override fun onResponse(call: Call<RecentMovies>, response: Response<RecentMovies>) {
-                if (response.isSuccessful) {
-                    Log.i("MovieRepository", "")
-                    val movies = response.body() as RecentMovies
-                    movieMutableLiveData.postValue(movies)
+            override fun onResponse(
+                call: Call<DiscoveryResponse>,
+                response: Response<DiscoveryResponse>
+            ) {
+                Log.d("MovieRepository", "Sucesso")
+                Log.d("MovieRepository", response.code().toString())
+                val body = response.body()
+                if (body != null) {
+                    movieMutableLiveData.postValue(response.body())
                 }
             }
+
         })
         return movieMutableLiveData
     }

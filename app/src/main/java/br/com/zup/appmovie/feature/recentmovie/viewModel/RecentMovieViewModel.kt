@@ -4,22 +4,14 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import br.com.zup.appmovie.data.repository.MovieRepository
-import br.com.zup.appmovie.model.RecentMovies
-import java.util.ArrayList
+import br.com.zup.appmovie.model.DiscoveryResponse
+
 
 class RecentMovieViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = MovieRepository()
 
-    fun getMovieById(id: String): LiveData<RecentMovies> {
-        return repository.getMovieById(id)
+    fun getRecentMovies(): LiveData<DiscoveryResponse> {
+        return repository.getRecentMovies()
     }
 
-    fun mockedList(): ArrayList<RecentMovies> {
-        val listMovies = ArrayList<RecentMovies>()
-        for (i in 0..10) {
-            val movie = RecentMovies("", "filme $i")
-            listMovies.add(movie)
-        }
-        return listMovies
-    }
 }
