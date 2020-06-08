@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.appmovie.R
 import br.com.zup.appmovie.model.Movie
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recent_movies_item.view.*
 
 class RecentMovieListAdapter(
@@ -29,9 +30,13 @@ class RecentMovieListAdapter(
     }
 
     class RecentMovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var imageUrl = "https://image.tmdb.org/t/p/w185"
         lateinit var id: String
-        fun populateView(movies: Movie) {
-            itemView.text_view_recent_movie.text = movies.originalTitle
+        fun populateView(movie: Movie) {
+            itemView.text_view_recent_movie.text = movie.originalTitle
+            if (movie.posterPath.isNotEmpty()){
+                Picasso.get().load("$imageUrl${movie.posterPath}").into(itemView.photo_recent_movie)
+            }
         }
 
     }

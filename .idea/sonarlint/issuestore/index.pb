@@ -17,8 +17,6 @@ Uapp/src/main/java/br/com/zup/appmovie/feature/recentmovie/view/RecentMovieActiv
 Yapp/src/main/java/br/com/zup/appmovie/feature/favoritemovie/view/FavoriteMovieActivity.kt,6\3\630d1017601052259321406b83db9d603b3c256d
 w
 Gapp/src/main/java/br/com/zup/appmovie/feature/menu/view/MenuActivity.kt,a\d\ad517e20a44b5a78433950487ac0613599a4262f
-^
-.app/src/main/res/layout/recent_movies_item.xml,6\e\6e34850e1ae4df5eadc432f40f87656c3a4b9aab
 …
 Uapp/src/main/java/br/com/zup/appmovie/feature/interfaces/RecyclerViewClickListener.kt,8\9\894a7fe0dff85c1a0da5fe43575c649947cff1ae
 d

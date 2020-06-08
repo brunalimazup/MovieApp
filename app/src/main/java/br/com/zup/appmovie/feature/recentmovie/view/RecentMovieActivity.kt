@@ -21,6 +21,7 @@ class RecentMovieActivity : AppCompatActivity(), RecyclerViewClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recent_movie)
+        setTitle("Recent Movies")
         viewModel = ViewModelProviders.of(this).get(RecentMovieViewModel::class.java)
         viewModel.getRecentMovies().observe(this,
             Observer<DiscoveryResponse> { response ->

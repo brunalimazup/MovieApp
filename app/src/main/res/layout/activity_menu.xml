@@ -7,32 +7,20 @@
     android:background="@drawable/backgroundmenu"
     tools:context=".feature.menu.view.MenuActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarMenu"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title=" Options menu" />
-
-
     <Button
         android:id="@+id/btnRecentMovies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="144dp"
         android:background="@drawable/buttonshape"
         android:text="@string/button_recent"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarMenu" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+    <Button
             android:id="@+id/btnFavoriteMovies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
