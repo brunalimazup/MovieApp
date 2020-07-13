@@ -3,5 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".feature.detailsmovie.view.DetailsMovieActivity"/>
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/photo_recent_movie"
+        android:layout_width="175dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_recent_movie" />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="132dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="84dp"
+        android:text="Description"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <ImageButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="42dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:src="@android:drawable/star_on"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_recent_movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toEndOf="@+id/photo_recent_movie"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/txt_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toEndOf="@+id/photo_recent_movie"
+        app:layout_constraintTop_toBottomOf="@+id/btn_favorite"
+        app:layout_constraintVertical_bias="0.378" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
