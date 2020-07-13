@@ -25,3 +25,13 @@ p
 @app/src/main/java/br/com/zup/appmovie/model/DiscoveryResponse.kt,a\0\a0f2123aa40e71329883413de4bf1653f0ff7aa8
 v
 Fapp/src/main/java/br/com/zup/appmovie/data/service/DiscoveryService.kt,9\3\93558cc5661865252450797996601fa73a68aa78
+k
+;app/src/main/java/br/com/zup/appmovie/model/MovieDetails.kt,4\5\4569666d2557d8b63427991cc419e3809c643dea
+á
+Wapp/src/main/java/br/com/zup/appmovie/feature/detailsmovie/view/DetailsMovieActivity.kt,f\3\f3cc15ccfe15df8cc70ad14c26dbd03003df4ad5
+a
+1app/src/main/res/layout/activity_recent_movie.xml,8\2\821c003400aa3f309b222d62bc8017ee9be0ca12
+R
+"app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
+è
+_app/src/main/java/br/com/zup/appmovie/feature/favoritemovie/adapter/FavoriteMovieListAdapter.kt,e\3\e3e11b3714c4f2965b18621b2f74831feb7d2b68

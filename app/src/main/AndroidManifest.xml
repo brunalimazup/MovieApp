@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.favoritemovie.view.FavoriteMovieActivity"></activity>
+        <activity android:name=".feature.detailsmovie.view.DetailsMovieActivity"></activity>
+        <activity android:name=".feature.favoritemovie.view.FavoriteMovieActivity" />
         <activity android:name=".feature.splash.view.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".feature.menu.view.MenuActivity" />
-        <activity android:name=".feature.recentmovie.view.RecentMovieActivity">
-
-        </activity>
+        <activity android:name=".feature.recentmovie.view.RecentMovieActivity"></activity>
     </application>
 
 </manifest>
