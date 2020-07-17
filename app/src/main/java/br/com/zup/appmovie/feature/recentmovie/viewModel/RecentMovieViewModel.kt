@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import br.com.zup.appmovie.data.repository.MovieRepository
 import br.com.zup.appmovie.model.DiscoveryResponse
 
-
 class RecentMovieViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = MovieRepository()
 
